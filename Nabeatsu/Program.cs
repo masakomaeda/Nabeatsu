@@ -28,8 +28,8 @@ namespace SMax.NewCore21.MorningProject.Nabeatsu
             else
             {
                 var normalNum = Enumerable.Range(1, inputNum);
-                var woldTransNum = normalNum.Select(n => new WorldTrans(n).ToString());
-                var outputStr = string.Join(",", woldTransNum);
+                var worldTransNum = normalNum.Select(n => new WorldTrans(n).ToString());
+                var outputStr = string.Join(",", worldTransNum);
 
                 //*** 結果を出力して終了
                 Console.WriteLine(outputStr);

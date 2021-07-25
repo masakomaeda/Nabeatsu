@@ -45,14 +45,10 @@ namespace SMax.NewCore21.MorningProject.Nabeatsu
         /// <returns></returns>
         private string ChangeToWorldNum()
         {
-            var ret = _value.ToString();
+            var ret = $"{_value}";
 
             // 3(KEYCODE)の倍数かそれが含まれるときはaho(KEYWORD)を返す
-            if (_value % KEYCODE == 0)
-            {
-                ret = KEYWORD;
-            }
-            else if (ret.Contains(KEYCODE.ToString()))
+            if (_value % KEYCODE == 0 || ret.Contains($"{KEYCODE}"))
             {
                 ret = KEYWORD;
             }
